@@ -1,78 +1,194 @@
-# Fotos y assets para la web de Melisa Liberman
+# Fotos de la web · Melisa Liberman
 
-Todas van en `assets/img/`. **Respetar los nombres exactos** (el código los busca así).
+Son **11 archivos** en total. Todos van en la carpeta `assets/img/` del proyecto,
+con el **nombre exacto** que figura acá (el código los busca así, en minúscula y sin acentos).
 
-Formato: `.jpg` para fotos, `.png` para logo/favicon (con fondo transparente).
-Calidad: exportar a ~80–85% de compresión. Ninguna foto debería pesar más de **400 KB**.
+Reglas generales:
+
+- **Formato JPG** para todas las fotos. **PNG solo para el logo y el favicon**, que necesitan fondo transparente.
+- **Fondo natural de la foto** en todos los casos: nada de recortes ni fondos blancos artificiales. Es una web cálida, no un catálogo.
+- Sacadas con celular está perfecto, siempre que sea **de día, con luz natural** y la cámara limpia.
+- Mandalas **sin comprimir** (Drive o WeTransfer, nunca por WhatsApp — WhatsApp las destroza).
+- Antes de subirlas al sitio yo las optimizo: ninguna tiene que superar los **400 KB** ya publicada.
 
 ---
 
-## 1. Principales (imprescindibles)
+## 1 · `hero.jpg` — la foto principal
 
-| Nombre del archivo | Tamaño (px) | Proporción | Qué tiene que mostrar |
+| | |
+|---|---|
+| **Tamaño** | 1200 × 1500 px |
+| **Proporción** | 4:5 vertical |
+| **Formato** | JPG · fondo natural |
+| **Dónde va** | La imagen grande del inicio, junto al título "Odontología con criterio" |
+
+**Qué tiene que mostrar:** a **Melisa**, plano medio (de la cintura para arriba), en el consultorio,
+con ambo o guardapolvo. Puede estar mirando a cámara con una sonrisa tranquila, o trabajando
+concentrada — las dos funcionan, pero que se le vea bien la cara.
+
+⚠️ **Importante:** la foto se recorta con un **arco redondeado en la parte de arriba**, así que
+dejá aire por encima de la cabeza y no pongas nada importante en las esquinas superiores.
+
+---
+
+## 2 · `sobre-mi.jpg` — el retrato
+
+| | |
+|---|---|
+| **Tamaño** | 1000 × 1250 px |
+| **Proporción** | 4:5 vertical |
+| **Formato** | JPG · fondo natural, limpio y desenfocado |
+| **Dónde va** | Sección "Sobre mí" del inicio y encabezado de la página Sobre mí |
+
+**Qué tiene que mostrar:** un **retrato cercano de Melisa**, del pecho para arriba, sonriendo,
+mirando a cámara. Fondo simple: una pared clara, una planta desenfocada, el consultorio de fondo.
+Que sea distinta a la del hero (otra pose, otro encuadre), porque las dos se ven en la misma página.
+
+⚠️ **Importante:** esta foto se recorta en **óvalo**. Todo lo que quede en las cuatro esquinas
+desaparece — dejá bastante aire alrededor de la cara y no la pongas pegada a un borde.
+
+---
+
+## 3 · `sobre-mi-detalle.jpg` — el trabajo en acción
+
+| | |
+|---|---|
+| **Tamaño** | 1200 × 900 px |
+| **Proporción** | 4:3 horizontal |
+| **Formato** | JPG · fondo natural |
+| **Dónde va** | Página Sobre mí, junto al texto "Integral y preventiva" |
+
+**Qué tiene que mostrar:** **Melisa trabajando**. Las manos con guantes sobre un paciente,
+o revisando una radiografía, o explicándole algo a alguien con un modelo dental en la mano.
+Es la foto que transmite "esto es alguien que sabe lo que hace".
+
+Si hay un paciente en la foto, **no se le tiene que reconocer la cara** — de perfil, con la boca
+en foco y el resto fuera de cuadro, o directamente solo las manos y el instrumental.
+Igual pedile permiso por escrito.
+
+---
+
+## 4, 5 y 6 · `consultorio-1.jpg`, `consultorio-2.jpg`, `consultorio-3.jpg`
+
+| | |
+|---|---|
+| **Tamaño** | 1200 × 900 px cada una |
+| **Proporción** | 4:3 horizontal |
+| **Formato** | JPG · fondo natural |
+| **Dónde va** | Galería "Lomas Centro Médico" del inicio, las tres juntas en fila |
+
+**Qué tiene que mostrar** (una cosa distinta cada una):
+
+1. **El sillón odontológico** con el equipo, ordenado y con la luz prendida.
+2. **La sala de espera o la recepción** de Lomas Centro Médico — el lugar donde el paciente llega.
+3. **Un detalle**: el instrumental prolijo sobre la bandeja, la pantalla con una radiografía, o el escritorio.
+
+⚠️ **Que las tres tengan la misma luz y el mismo estilo**, porque se ven una al lado de la otra
+y si una sale amarilla y otra azul se nota muchísimo. Sacalas todas el mismo día, a la misma hora.
+
+---
+
+## 7 · `cta-fondo.jpg` — el fondo de la última sección
+
+| | |
+|---|---|
+| **Tamaño** | 1600 × 1000 px |
+| **Proporción** | 16:10 horizontal |
+| **Formato** | JPG · fondo natural |
+| **Dónde va** | Detrás de la banda caramelo del final: "¿Hace cuánto no vas al dentista?" |
+
+**Qué tiene que mostrar:** un **plano amplio y luminoso del consultorio o la recepción**, sin gente
+o con gente muy chiquita. Va tapada por una capa de color al 18% de opacidad, así que se ve
+apenas como una textura de fondo.
+
+⚠️ **El centro tiene que estar vacío** — ahí van el título y los botones. Buscá una toma donde
+lo interesante esté en los bordes.
+
+---
+
+## 8, 9 y 10 · `testimonio-1.jpg`, `testimonio-2.jpg`, `testimonio-3.jpg`
+
+| | |
+|---|---|
+| **Tamaño** | 400 × 400 px cada una |
+| **Proporción** | 1:1 cuadrada |
+| **Formato** | JPG · fondo natural |
+| **Dónde va** | Junto a cada testimonio, en un círculo de 52 px |
+
+**Qué tiene que mostrar:** la **cara de un paciente real** que haya dejado su reseña, plano corto,
+sonriendo. Se ve chiquitita y en círculo, así que lo único que importa es que **la cara esté centrada**.
+
+⚠️ **Esto necesita autorización firmada del paciente.** Es su imagen y es un contexto de salud.
+Si no la tenés, avisame y lo resuelvo de dos maneras posibles:
+
+- Un círculo caramelo con la inicial del nombre (ya está programado, se activa solo si no hay foto).
+- Sacar los testimonios de la web hasta que haya reseñas reales con permiso.
+
+**Los testimonios que están ahora son de ejemplo, escritos por mí.** No los dejes publicados como
+si fueran reales: o los reemplazamos por reseñas verdaderas, o los sacamos.
+
+---
+
+## 11 · `og-image.jpg` — la vista previa al compartir
+
+| | |
+|---|---|
+| **Tamaño** | 1200 × 630 px |
+| **Proporción** | 1.91:1 horizontal |
+| **Formato** | JPG · fondo natural o beige de marca |
+| **Dónde va** | No se ve en la web. Es la imagen que aparece cuando alguien pega el link en WhatsApp, Instagram o Facebook |
+
+**Qué tiene que mostrar:** Melisa a un costado y, del otro, su nombre y "Odontología integral · Mendoza"
+con la tipografía de la marca. **Esta la armo yo** con la foto del hero — vos no tenés que hacer nada,
+solo avisame cuando estén las fotos.
+
+---
+
+## Logo y favicon
+
+Estos **no son fotos** y necesitan tratamiento distinto:
+
+| Archivo | Tamaño | Formato | Qué es |
 |---|---|---|---|
-| `hero.jpg` | **1200 × 1500** | 4:5 vertical | Retrato principal de Meli en el consultorio, cuerpo medio, mirando a cámara o trabajando. Es la foto grande del inicio. Dejá aire alrededor: se recorta en redondeado. |
-| `sobre-mi.jpg` | **1000 × 1250** | 4:5 vertical | Retrato cercano, sonriendo, fondo limpio. **Se recorta en óvalo**, así que dejá aire a los costados y no pongas nada importante en las esquinas. |
-| `sobre-mi-detalle.jpg` | **1200 × 900** | 4:3 horizontal | Plano de ambiente: el consultorio, manos trabajando, instrumental prolijo. Acompaña al retrato. |
-| `cta-fondo.jpg` | **1600 × 1000** | 16:10 horizontal | Foto amplia y luminosa del consultorio o recepción. Va de fondo en la sección final "Agendá tu turno", con un velo oscuro encima. Que no tenga elementos importantes en el centro. |
+| `logo.png` | 600 × 200 px aprox. | **PNG con fondo transparente** | Logo horizontal en oliva o caramelo. Reemplazaría al ícono de diente + texto que hay ahora en el encabezado. |
+| `logo-blanco.png` | 600 × 200 px aprox. | **PNG con fondo transparente** | El mismo logo pero en blanco puro, para el footer caramelo. |
+| `favicon.png` | 512 × 512 px | **PNG con fondo transparente** | El isotipo solo o las iniciales "ML" en cuadrado. Es el iconito de la pestaña del navegador. |
 
-## 2. Tratamientos
+⚠️ El logo tiene que venir **en PNG con transparencia real** (o mejor todavía, en SVG si lo tenés).
+Si me pasás un JPG con fondo blanco, se va a ver un rectángulo blanco encima del beige del footer.
 
-Una por cada servicio. **Mismo encuadre y misma luz en las seis** para que la grilla se vea pareja.
-
-| Nombre del archivo | Tamaño (px) | Proporción |
-|---|---|---|
-| `tratamiento-1.jpg` … `tratamiento-6.jpg` | **900 × 675** | 4:3 horizontal |
-
-> La cantidad final depende de los tratamientos que definamos con la info de su LinkedIn.
-> Si son menos de 6, mandá solo las que correspondan.
-
-## 3. Consultorio (galería)
-
-| Nombre del archivo | Tamaño (px) | Proporción |
-|---|---|---|
-| `consultorio-1.jpg` | **1200 × 900** | 4:3 |
-| `consultorio-2.jpg` | **1200 × 900** | 4:3 |
-| `consultorio-3.jpg` | **1200 × 900** | 4:3 |
-
-Sillón odontológico, sala de espera y algún detalle (instrumental, plantas, recepción).
-
-## 4. Testimonios
-
-| Nombre del archivo | Tamaño (px) | Proporción |
-|---|---|---|
-| `testimonio-1.jpg` · `testimonio-2.jpg` · `testimonio-3.jpg` | **400 × 400** | 1:1 |
-
-Cara centrada, plano corto. **Se ven en círculo de ~60 px**, así que no importa mucho la calidad, pero sí que la cara esté centrada.
-Si no hay fotos reales de pacientes, avisame y pongo las iniciales en un círculo tostado (queda bien y evita problemas de consentimiento).
-
-## 5. Marca y navegador
-
-| Nombre del archivo | Tamaño (px) | Notas |
-|---|---|---|
-| `logo.png` | **600 × 200** aprox. | Logo horizontal en oliva/tostado, **fondo transparente**. Para el header. |
-| `logo-blanco.png` | **600 × 200** aprox. | Misma versión pero en blanco, fondo transparente. Para el footer oscuro. |
-| `favicon.png` | **512 × 512** | Isotipo o inicial "ML" en cuadrado. Es el ícono de la pestaña del navegador. |
-| `og-image.jpg` | **1200 × 630** | Imagen que aparece al compartir el link por WhatsApp/Instagram. Foto de Meli + su nombre + "Odontología". La puedo armar yo si me pasás la foto. |
+Si por ahora no hay logo, se queda como está: el ícono de diente en oliva + "Melisa Liberman"
+en Bodoni itálica. Funciona bien y es coherente con la marca.
 
 ---
 
-## Resumen rápido para pedirle a Meli
+## Mensaje listo para mandarle a Melisa
 
-Si querés mandarle un mensaje corto, es esto:
-
-> Necesito estas fotos, todas horizontales o verticales según indico, con buena luz natural:
-> 1. **Un retrato vertical** tuyo en el consultorio (cuerpo medio) — la principal.
-> 2. **Un retrato cuadrado** cercano, sonriendo.
-> 3. **3 o 4 fotos del consultorio**: el sillón, la sala de espera, un detalle.
-> 4. **Una foto amplia y luminosa** del lugar (para el fondo del final).
-> 5. **El logo en PNG con fondo transparente**, en versión color y versión blanca.
+> Meli, para la web necesito estas fotos. Todas con luz natural, de día, y mandámelas por Drive
+> o WeTransfer (por WhatsApp se arruinan).
 >
-> Sacadas con el celular está perfecto, siempre que sea de día y con la cámara limpia.
-> Mandalas **sin comprimir** (por Drive o WeTransfer, no por WhatsApp).
+> **De vos:**
+> 1. Una **vertical** en el consultorio, de la cintura para arriba, con ambo. Dejá aire arriba de la cabeza.
+> 2. Un **retrato cercano**, sonriendo, mirando a cámara, con fondo simple. Que sea distinta a la anterior.
+> 3. Una **horizontal trabajando**: manos con guantes, o mirando una radiografía, o explicando algo.
+>
+> **Del consultorio (todas horizontales, sacalas el mismo día para que tengan la misma luz):**
+>
+> 4. El sillón con el equipo, ordenado.
+> 5. La sala de espera o la recepción.
+> 6. Un detalle: el instrumental en la bandeja, la pantalla con una radiografía.
+> 7. Una toma amplia y luminosa del lugar, con el centro despejado.
+>
+> **Si tenés:**
+> 8. El **logo en PNG con fondo transparente**, en versión color y en versión blanca.
+>
+> Si aparece algún paciente en las fotos, que no se le reconozca la cara, y aun así necesito
+> su permiso por escrito.
 
 ---
 
-## Si todavía no hay fotos
+## Mientras tanto
 
-Puedo armar la web completa con **placeholders** (bloques tostados con el nombre del archivo escrito adentro), así ves la estructura funcionando y después solo reemplazás los archivos manteniendo los nombres. No hay que tocar nada de código.
+Están todas puestas como **placeholders**: bloques beige con el nombre del archivo y el tamaño
+escrito adentro. Cuando lleguen las definitivas se reemplazan los archivos **manteniendo los
+mismos nombres** y no hay que tocar una línea de código.
