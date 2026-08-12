@@ -165,7 +165,7 @@ h4{font-size:1.05rem}
   min-height:38px;flex-wrap:wrap;padding-block:7px;
 }
 .topbar span{display:inline-flex;align-items:center;gap:8px}
-.topbar svg{width:14px;height:14px;fill:none;stroke:var(--sobre-caramelo);stroke-width:1.8}
+.topbar svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8}
 
 .header{
   position:sticky;top:0;z-index:60;background:rgba(250,247,241,.92);
@@ -176,7 +176,7 @@ h4{font-size:1.05rem}
   min-height:var(--header-h);
 }
 .marca{display:flex;align-items:center;gap:12px;color:inherit}
-.marca__icono{width:34px;height:34px;flex:none;fill:none;stroke:var(--oliva);stroke-width:1.6}
+.marca__icono{width:34px;height:34px;flex:none;fill:none;color:var(--oliva);stroke:currentColor;stroke-width:1.6}
 .marca__txt{display:flex;flex-direction:column;line-height:1.15}
 .marca__nombre{
   font-family:var(--f-display);font-style:italic;font-size:1.28rem;
@@ -271,9 +271,9 @@ h4{font-size:1.05rem}
 .card-trat:hover{transform:translateY(-5px);box-shadow:var(--sombra-md)}
 .card-trat__icono{
   width:58px;height:58px;border-radius:50%;background:var(--caramelo);
-  display:grid;place-items:center;margin:0 auto 20px;flex:none;
+  display:grid;place-items:center;margin:0 auto 20px;flex:none;color:#fff;
 }
-.card-trat__icono svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:1.6}
+.card-trat__icono svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6}
 /* Los títulos de tarjeta son texto corto: van en la sans para que se lean
    parejos con el párrafo de abajo. No compiten con los titulares reales. */
 .card-trat h3{
@@ -309,9 +309,9 @@ h4{font-size:1.05rem}
 .acor summary::-webkit-details-marker{display:none}
 .acor__ico{
   width:46px;height:46px;border-radius:50%;background:var(--caramelo-claro);
-  display:grid;place-items:center;flex:none;
+  display:grid;place-items:center;flex:none;color:var(--oliva-medio);
 }
-.acor__ico svg{width:22px;height:22px;fill:none;stroke:var(--oliva-medio);stroke-width:1.6}
+.acor__ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6}
 .acor__mas{
   margin-left:auto;width:28px;height:28px;border-radius:50%;background:var(--crema-2);
   display:grid;place-items:center;flex:none;color:var(--oliva-medio);
@@ -321,7 +321,8 @@ h4{font-size:1.05rem}
 .acor__cuerpo{padding:0 28px 28px 92px;color:var(--gris);font-size:.94rem}
 .acor__cuerpo ul{display:grid;gap:10px;margin-top:16px}
 .acor__cuerpo li{display:flex;gap:11px;align-items:flex-start}
-.acor__cuerpo li svg{width:17px;height:17px;flex:none;margin-top:5px;fill:none;stroke:var(--oliva);stroke-width:2}
+.acor__cuerpo li{color:var(--texto)}
+.acor__cuerpo li svg{width:17px;height:17px;flex:none;margin-top:5px;fill:none;color:var(--oliva);stroke:currentColor;stroke-width:2}
 
 /* ---------- Pasos ---------- */
 .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:paso}
@@ -343,9 +344,9 @@ h4{font-size:1.05rem}
 .beneficio{display:flex;gap:16px;align-items:flex-start}
 .beneficio__ico{
   width:46px;height:46px;border-radius:14px;background:var(--caramelo-claro);
-  display:grid;place-items:center;flex:none;
+  display:grid;place-items:center;flex:none;color:var(--oliva-medio);
 }
-.beneficio__ico svg{width:22px;height:22px;fill:none;stroke:var(--oliva-medio);stroke-width:1.6}
+.beneficio__ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6}
 .beneficio h3{
   font-family:var(--f-texto);font-style:normal;font-weight:600;font-size:.98rem;
   color:var(--texto);margin-bottom:.3em;
@@ -426,9 +427,9 @@ h4{font-size:1.05rem}
 .contacto-item:last-child{border-bottom:0}
 .contacto-item__ico{
   width:44px;height:44px;border-radius:50%;background:var(--caramelo-claro);
-  display:grid;place-items:center;flex:none;
+  display:grid;place-items:center;flex:none;color:var(--oliva-medio);
 }
-.contacto-item__ico svg{width:20px;height:20px;fill:none;stroke:var(--oliva-medio);stroke-width:1.7}
+.contacto-item__ico svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7}
 .contacto-item b{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oliva-medio);margin-bottom:3px}
 .contacto-item a,.contacto-item span{color:var(--texto);font-size:.96rem}
 .contacto-item a:hover{color:var(--oliva-medio)}
@@ -478,11 +479,11 @@ h4{font-size:1.05rem}
 .footer a:hover{color:#fff}
 .footer__redes{display:flex;gap:12px;margin-top:20px}
 .footer__redes a{
-  width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.22);
+  width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;
   display:grid;place-items:center;padding:0;transition:background .2s ease,transform .2s ease;
 }
 .footer__redes a:hover{background:rgba(255,255,255,.4);transform:translateY(-2px)}
-.footer__redes svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:1.8}
+.footer__redes svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}
 .footer__abajo{
   border-top:1px solid rgba(255,255,255,.3);padding:22px 0;
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.78rem;
