@@ -2,7 +2,7 @@
 //  COMPORTAMIENTO COMÚN DEL SITIO
 //  Menú móvil, link de la agenda, testimonios, año y WhatsApp.
 // =============================================================
-import { CONTACTO, AGENDA_URL, TESTIMONIOS } from "./datos.js";
+import { CONTACTO, AGENDA_URL, MENSAJE_WA, TESTIMONIOS } from "./datos.js";
 import { linkWhatsApp, escapar } from "./util.js";
 
 /* ---------- Menú móvil ---------- */
@@ -37,7 +37,8 @@ document.querySelectorAll("[data-agenda]").forEach((el) => {
 
 /* ---------- Links de WhatsApp ---------- */
 document.querySelectorAll("[data-wa]").forEach((el) => {
-  const msg = el.dataset.wa || "Hola Melisa, quisiera hacerte una consulta.";
+  // data-wa vacío usa el mensaje general; con texto propio, ese texto.
+  const msg = el.dataset.wa || MENSAJE_WA;
   el.href = linkWhatsApp(CONTACTO.whatsapp, msg);
   el.target = "_blank";
   el.rel = "noopener";

@@ -5,7 +5,7 @@
 // =============================================================
 import "./main.js";
 import { esEmail, linkWhatsApp } from "./util.js";
-import { CONTACTO } from "./datos.js";
+import { CONTACTO, MENSAJE_WA } from "./datos.js";
 
 const form = document.getElementById("form-contacto");
 const aviso = document.getElementById("msg-contacto");
@@ -33,7 +33,7 @@ form?.addEventListener("submit", (e) => {
 
   // Texto que se abre ya escrito en WhatsApp
   const texto = [
-    `Hola Melisa, soy ${nombre}.`,
+    `Hola, me contacto con Melisa Liberman, desde su sitio web. Soy ${nombre}.`,
     `Motivo: ${d.motivo || "Consulta general"}`,
     email ? `Email: ${email}` : "",
     (d.telefono || "").trim() ? `Teléfono: ${d.telefono.trim()}` : "",

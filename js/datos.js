@@ -19,6 +19,11 @@ export const CONTACTO = {
   linkedin: "https://www.linkedin.com/in/melisa-liberman-odontologa/",
 };
 
+// Mensaje que aparece ya escrito al abrir WhatsApp desde cualquier botón
+// del sitio. Se cambia acá una vez y cambia en toda la web.
+export const MENSAJE_WA =
+  "Hola, me contacto con Melisa Liberman, desde su sitio web. Quería realizar una consulta de sus servicios de odontología";
+
 // Agenda del centro donde atiende. Todos los botones "Agendá tu turno"
 // abren este link en una pestaña nueva.
 export const AGENDA_URL =
@@ -100,17 +105,17 @@ export const TRATAMIENTOS = [
     ],
   },
   {
-    id: "familia",
-    nombre: "Odontología para toda la familia",
-    icono: "nino",
-    resumen: "Pacientes de todas las edades, incluidos los que le tienen miedo al dentista.",
+    id: "urgencias",
+    nombre: "Urgencias y pacientes con miedo al dentista",
+    icono: "corazon",
+    resumen: "Si hay dolor, se resuelve primero. Y si hay miedo, se avanza a tu ritmo.",
     detalle:
-      "Chicos, adultos y adultos mayores. Con más de diez años de consultorio, Melisa trabaja mucho con pacientes que llegan con miedo o que hace años que no van al dentista: se explica todo antes de hacerlo y se avanza al ritmo que cada uno pueda.",
+      "Con más de diez años de consultorio, Melisa trabaja mucho con pacientes que llegan con dolor, o que hace años que no van al dentista por miedo. En los dos casos la lógica es la misma: primero se calma lo urgente, se explica todo antes de hacerlo y se avanza al ritmo que cada uno pueda.",
     puntos: [
+      "Dolor y urgencias resueltos con prioridad",
       "Primera consulta sin apuro, explicando cada paso",
-      "Atención de niños y adolescentes",
       "Acompañamiento a pacientes con miedo al dentista",
-      "Urgencias y dolor resueltos con prioridad",
+      "Retomar el cuidado después de años sin controles",
     ],
   },
 ];
