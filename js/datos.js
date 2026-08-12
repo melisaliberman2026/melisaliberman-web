@@ -131,20 +131,20 @@ export const TESTIMONIOS = [
       "Llegué con miedo después de años sin ir al dentista y Melisa me explicó todo antes de tocarme un diente. Terminamos una rehabilitación completa en etapas y hoy mastico como no lo hacía hace mucho.",
     autor: "Paciente de rehabilitación oral",
     detalle: "Mendoza",
-    foto: "assets/img/testimonio-1.jpg?v=1",
+    foto: "assets/img/testimonio-1.jpg?v=2",
   },
   {
     texto:
       "Me hizo el diseño de sonrisa antes del casamiento. Lo que más me gustó es que no quedó exagerado: se ve natural y nadie me pregunta qué me hice, solo me dicen que me veo bien.",
     autor: "Paciente de estética dental",
     detalle: "Mendoza",
-    foto: "assets/img/testimonio-2.jpg?v=1",
+    foto: "assets/img/testimonio-2.jpg?v=2",
   },
   {
     texto:
       "Perdí una muela y pensé que era un trámite eterno. Me explicó por qué había que estudiar el hueso primero, hicimos el implante con todos los controles y quedó perfecto.",
     autor: "Paciente de implantes",
     detalle: "Mendoza",
-    foto: "assets/img/testimonio-3.jpg?v=1",
+    foto: "assets/img/testimonio-3.jpg?v=2",
   },
 ];

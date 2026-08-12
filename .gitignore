@@ -8,3 +8,6 @@ desktop.ini
 .netlify/
 .vscode/
 .idea/
+
+# Copias sin comprimir de las fotos (no hace falta subirlas)
+assets/img/_originales/

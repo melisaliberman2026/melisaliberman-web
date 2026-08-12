@@ -2,8 +2,8 @@
 //  COMPORTAMIENTO COMÚN DEL SITIO
 //  Menú móvil, link de la agenda, testimonios, año y WhatsApp.
 // =============================================================
-import { CONTACTO, AGENDA_URL, MENSAJE_WA, TESTIMONIOS } from "./datos.js?v=1";
-import { linkWhatsApp, escapar } from "./util.js?v=1";
+import { CONTACTO, AGENDA_URL, MENSAJE_WA, TESTIMONIOS } from "./datos.js?v=2";
+import { linkWhatsApp, escapar } from "./util.js?v=2";
 
 /* ---------- Menú móvil ---------- */
 const menuBtn = document.querySelector(".menu-btn");
@@ -14,14 +14,14 @@ if (menuBtn && nav) {
     menuBtn.setAttribute("aria-expanded", String(abierto));
     menuBtn.querySelector("use").setAttribute(
       "href",
-      `assets/iconos.svg?v=1#${abierto ? "ico-cerrar" : "ico-menu"}`
+      `assets/iconos.svg?v=2#${abierto ? "ico-cerrar" : "ico-menu"}`
     );
   });
   nav.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => {
       nav.classList.remove("abierto");
       menuBtn.setAttribute("aria-expanded", "false");
-      menuBtn.querySelector("use").setAttribute("href", "assets/iconos.svg?v=1#ico-menu");
+      menuBtn.querySelector("use").setAttribute("href", "assets/iconos.svg?v=2#ico-menu");
     })
   );
 }
