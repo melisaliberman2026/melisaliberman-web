@@ -6,26 +6,28 @@
    ========================================================= */
 
 :root{
-  /* --- Caramelo: el eje de la paleta --- */
-  --caramelo:#B8905F;         /* el tostado de marca */
-  --caramelo-osc:#8B6239;     /* textos chicos destacados, íconos */
-  --caramelo-prof:#6B4A2A;    /* footer, topbar y bloques oscuros */
-  --caramelo-claro:#E8DCCB;   /* fondos de íconos, ondas */
+  /* --- Caramelo: el eje de la paleta ---
+     Todos los tonos salen del mismo color (H 32°, S 36%), variando solo el
+     brillo. Así la escala es coherente y los contrastes están controlados. */
+  --caramelo:#BD9A71;         /* el beige caramelo de marca */
+  --caramelo-claro:#ECE1D5;   /* fondos de íconos, ondas */
+  --caramelo-osc:#84643D;     /* textos chicos e íconos · 5.1:1 sobre crema */
+  --caramelo-prof:#684F31;    /* footer, topbar y bloques · 7.6:1 con texto blanco */
 
   /* --- Neutros --- */
   --blanco:#FFFFFF;
   --crema:#FAF7F1;            /* fondo general */
-  --crema-2:#F3ECE1;          /* secciones alternadas */
+  --crema-2:#F4EDE4;          /* secciones alternadas */
 
   /* --- Titulares --- */
-  --titulo:#7A5432;
-  --titulo-fuerte:#5C3D22;
+  --titulo:#84643D;
+  --titulo-fuerte:#5B442A;
 
   /* --- Texto --- */
   --texto:#3D3327;
   --gris:#7A6E60;
   --gris-claro:#A2968A;
-  --borde:#EADFCF;
+  --borde:#EDE2D4;
 
   /* --- Acento (solo botones y detalles chicos) --- */
   --oliva:#79791A;
@@ -138,7 +140,7 @@ h4{font-size:1.05rem}
 .btn svg{width:17px;height:17px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8}
 .btn--primario{background:var(--oliva);color:#fff;box-shadow:0 10px 26px rgba(121,121,26,.26)}
 .btn--primario:hover{background:var(--oliva-osc);transform:translateY(-2px);box-shadow:0 14px 32px rgba(121,121,26,.32)}
-.btn--tostado{background:var(--caramelo);color:#fff;box-shadow:0 10px 26px rgba(184,144,95,.3)}
+.btn--tostado{background:var(--caramelo);color:#fff;box-shadow:0 10px 26px rgba(189,154,113,.34)}
 .btn--tostado:hover{background:var(--caramelo-osc);transform:translateY(-2px)}
 .btn--linea{background:transparent;color:var(--caramelo-osc);border-color:var(--caramelo)}
 .btn--linea:hover{background:var(--caramelo-osc);color:#fff;border-color:var(--caramelo-osc);transform:translateY(-2px)}
@@ -428,7 +430,7 @@ h4{font-size:1.05rem}
 }
 .campo textarea{resize:vertical;min-height:130px}
 .campo input:focus,.campo textarea:focus,.campo select:focus{
-  outline:0;border-color:var(--caramelo);box-shadow:0 0 0 3px rgba(184,144,95,.18);
+  outline:0;border-color:var(--caramelo);box-shadow:0 0 0 3px rgba(189,154,113,.24);
 }
 .form .btn{justify-self:start;margin-top:6px}
 .form__aviso{font-size:.86rem;border-radius:14px;padding:13px 16px;display:none}
