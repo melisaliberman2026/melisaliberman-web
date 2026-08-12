@@ -147,12 +147,61 @@ Si comprás el dominio, actualizá también las etiquetas `<link rel="canonical"
 Cada vez que cambies algo:
 
 ```bash
+python versionar.py     # ⭐ solo si tocaste imágenes, CSS o JavaScript
 git add .
 git commit -m "Qué cambiaste"
 git push
 ```
 
 Netlify vuelve a publicar solo, en menos de un minuto.
+
+---
+
+## 🔄 El tema de la caché
+
+**El problema.** Los navegadores guardan una copia de las imágenes, del CSS y del
+JavaScript para no bajarlos en cada visita. Como los archivos siempre se llaman igual
+(`hero.jpg`, `styles.css`), después de un cambio el navegador cree que ya los tiene y
+sigue mostrando la versión vieja. Eso te obligaba a borrar la caché a mano, y al
+paciente le hubiera pasado lo mismo.
+
+**Cómo está resuelto.** Hay dos capas:
+
+**1. El servidor avisa que revalide siempre.** En `netlify.toml` hay una regla `/*`
+que le dice al navegador: antes de usar tu copia, preguntá si cambió. Si no cambió,
+Netlify responde en unos pocos bytes y la página carga igual de rápido.
+
+> Antes la regla decía `/*.html`, y ese patrón **no alcanza a la home** (`/`) ni a las
+> URLs limpias (`/tratamientos`), porque esas direcciones no terminan en `.html`.
+> Por eso justo la portada era la que se quedaba vieja.
+
+**2. Los archivos llevan número de versión.** Todas las referencias del sitio terminan
+en `?v=1`:
+
+```html
+<link rel="stylesheet" href="css/styles.css?v=1">
+<img src="assets/img/hero.jpg?v=1">
+```
+
+Cuando corrés `python versionar.py`, ese número sube a `?v=2` en todo el proyecto de
+una sola vez. Para el navegador esa es una dirección **nueva**, así que la baja de cero
+sin importar qué tenga guardado. Es la parte que garantiza el resultado, porque algunos
+navegadores de celular ignoran lo que pide el servidor.
+
+**Regla práctica:**
+
+| Qué cambiaste | ¿Hay que correr `versionar.py`? |
+|---|---|
+| Texto dentro de un `.html` | No |
+| Una imagen de `assets/img/` | **Sí** |
+| `css/styles.css` | **Sí** |
+| Cualquier archivo de `js/` | **Sí** |
+
+Si te queda la duda, corrélo igual: no rompe nada.
+
+**Para probar mientras trabajás en tu computadora**, en el navegador abrí las
+herramientas de desarrollo con `F12`, andá a la pestaña **Network** y tildá
+**Disable cache**. Mientras esa ventana esté abierta, nunca vas a ver contenido viejo.
 
 ---
 

@@ -412,7 +412,7 @@ h4{font-size:1.05rem}
   border-radius:var(--radio-xl);padding:clamp(40px,5.5vw,76px);text-align:center;
 }
 .cta:before{
-  content:"";position:absolute;inset:0;background:url("../assets/img/cta-fondo.jpg") center/cover;
+  content:"";position:absolute;inset:0;background:url("../assets/img/cta-fondo.jpg?v=1") center/cover;
   opacity:.18;
 }
 .cta > *{position:relative;z-index:1}

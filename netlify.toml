@@ -5,40 +5,28 @@
   publish = "."
   command = ""
 
-# Caché: como los archivos mantienen siempre el mismo nombre (hero.jpg, styles.css…),
-# el navegador tiene que volver a preguntar si cambiaron. Si no, los visitantes que ya
-# entraron una vez seguirían viendo la versión vieja.
-# "must-revalidate" hace que pregunte; si no cambió, el servidor responde 304 (sin descargar).
-
+# =========================================================
+#  CACHÉ
+# =========================================================
+# Regla única para TODO el sitio: el navegador siempre pregunta al servidor
+# si el archivo cambió. Si no cambió, Netlify responde 304 (unos pocos bytes,
+# instantáneo) y el navegador usa su copia. Si cambió, lo baja de nuevo.
+#
+# Ojo con el patrón: "/*" es el único que cubre la home ("/") y las URLs
+# limpias ("/tratamientos"). Un patrón "/*.html" NO las alcanza, porque esas
+# direcciones no terminan en .html — ese era el motivo por el que había que
+# borrar la caché a mano para ver los cambios.
 [[headers]]
-  for = "/assets/img/*"
-  [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=86400, must-revalidate"
-
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-[[headers]]
-  for = "/*.html"
+  for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# URLs limpias: /tratamientos → /tratamientos.html
+# =========================================================
+#  URLs limpias: /tratamientos → /tratamientos.html
+# =========================================================
 [[redirects]]
   from = "/tratamientos"
   to = "/tratamientos.html"

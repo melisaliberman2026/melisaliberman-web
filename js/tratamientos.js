@@ -4,8 +4,8 @@
 //  edita en un solo lugar y no hay que tocar el HTML.
 // =============================================================
 import "./main.js";
-import { TRATAMIENTOS } from "./datos.js";
-import { escapar } from "./util.js";
+import { TRATAMIENTOS } from "./datos.js?v=1";
+import { escapar } from "./util.js?v=1";
 
 const caja = document.getElementById("acordeon-tratamientos");
 
@@ -14,7 +14,7 @@ if (caja) {
     (t, i) => `
     <details class="acor" id="${escapar(t.id)}"${i === 0 ? " open" : ""}>
       <summary>
-        <span class="acor__ico"><svg><use href="assets/iconos.svg#ico-${escapar(t.icono)}"></use></svg></span>
+        <span class="acor__ico"><svg><use href="assets/iconos.svg?v=1#ico-${escapar(t.icono)}"></use></svg></span>
         <span>${escapar(t.nombre)}</span>
         <span class="acor__mas" aria-hidden="true">+</span>
       </summary>
@@ -24,7 +24,7 @@ if (caja) {
           ${t.puntos
             .map(
               (p) =>
-                `<li><svg><use href="assets/iconos.svg#ico-check-simple"></use></svg><span>${escapar(p)}</span></li>`
+                `<li><svg><use href="assets/iconos.svg?v=1#ico-check-simple"></use></svg><span>${escapar(p)}</span></li>`
             )
             .join("")}
         </ul>

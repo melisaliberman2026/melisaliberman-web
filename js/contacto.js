@@ -4,8 +4,8 @@
 //  con opción de mandarlo por email como alternativa.
 // =============================================================
 import "./main.js";
-import { esEmail, linkWhatsApp } from "./util.js";
-import { CONTACTO, MENSAJE_WA } from "./datos.js";
+import { esEmail, linkWhatsApp } from "./util.js?v=1";
+import { CONTACTO, MENSAJE_WA } from "./datos.js?v=1";
 
 const form = document.getElementById("form-contacto");
 const aviso = document.getElementById("msg-contacto");
