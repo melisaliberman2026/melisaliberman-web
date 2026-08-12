@@ -1,18 +1,24 @@
 /* =========================================================
    Melisa Liberman · Sistema visual
-   Paleta blanco + beige caramelo. El oliva queda reservado
-   para botones y detalles chicos.
+   Blanco y beige caramelo como campo; el verde oliva como único
+   color de contraste (botones, títulos, footer y bloques oscuros).
    Un solo tipo en los titulares: Bodoni Moda itálica.
    ========================================================= */
 
 :root{
-  /* --- Caramelo: el eje de la paleta ---
-     Todos los tonos salen del mismo color (H 32°, S 36%), variando solo el
-     brillo. Así la escala es coherente y los contrastes están controlados. */
+  /* --- Beige caramelo: el campo de la paleta ---
+     Es el color que ocupa superficie: fondos suaves, ondas, íconos, filetes.
+     Nunca se usa para texto chico ni para bloques oscuros. */
   --caramelo:#BD9A71;         /* el beige caramelo de marca */
-  --caramelo-claro:#ECE1D5;   /* fondos de íconos, ondas */
-  --caramelo-osc:#84643D;     /* textos chicos e íconos · 5.1:1 sobre crema */
-  --caramelo-prof:#684F31;    /* footer, topbar y bloques · 7.6:1 con texto blanco */
+  --caramelo-claro:#ECE1D5;   /* fondos de íconos y ondas */
+
+  /* --- Oliva: el color de contraste ---
+     Todo lo que necesita destacarse o sostener texto blanco es oliva.
+     Así no aparece ningún marrón oscuro y la marca queda beige + verde. */
+  --oliva:#79791A;            /* botones */
+  --oliva-osc:#616115;        /* hover de botones */
+  --oliva-medio:#6D6D17;      /* textos chicos e íconos · 5.1:1 sobre crema */
+  --oliva-prof:#545412;       /* footer, topbar y bloques · 7.9:1 con texto blanco */
 
   /* --- Neutros --- */
   --blanco:#FFFFFF;
@@ -20,18 +26,14 @@
   --crema-2:#F4EDE4;          /* secciones alternadas */
 
   /* --- Titulares --- */
-  --titulo:#84643D;
-  --titulo-fuerte:#5B442A;
+  --titulo:#6D6D17;
+  --titulo-fuerte:#47470F;
 
   /* --- Texto --- */
   --texto:#3D3327;
   --gris:#7A6E60;
   --gris-claro:#A2968A;
   --borde:#EDE2D4;
-
-  /* --- Acento (solo botones y detalles chicos) --- */
-  --oliva:#79791A;
-  --oliva-osc:#5C5C12;
 
   /* --- Estados --- */
   --ok:#5C8A3C;
@@ -65,7 +67,7 @@ body{
    (evitan el salto de layout al cargar) y sin esto el navegador respeta ese
    alto fijo mientras achica el ancho, deformando la foto. */
 img{max-width:100%;height:auto;display:block}
-a{color:var(--caramelo-osc);text-decoration:none}
+a{color:var(--oliva-medio);text-decoration:none}
 button{font-family:inherit}
 p{margin:0 0 1em}
 ul{margin:0;padding:0;list-style:none}
@@ -101,7 +103,7 @@ h4{font-size:1.05rem}
 
 .eyebrow{
   font-family:var(--f-texto);font-size:.72rem;font-weight:600;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--caramelo-osc);margin:0 0 1em;display:block;
+  text-transform:uppercase;color:var(--oliva-medio);margin:0 0 1em;display:block;
 }
 .subtitulo{color:var(--gris);max-width:620px;font-size:1.02rem}
 .centro .subtitulo{margin-inline:auto}
@@ -128,8 +130,7 @@ h4{font-size:1.05rem}
 .seccion > .contenedor,
 .hero > .contenedor{position:relative;z-index:1}
 
-/* ---------- Botones ----------
-   Acá sí vive el oliva: es el único lugar donde aparece en grande. */
+/* ---------- Botones ---------- */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
   padding:15px 30px;border-radius:999px;font-family:var(--f-texto);font-weight:600;
@@ -141,18 +142,18 @@ h4{font-size:1.05rem}
 .btn--primario{background:var(--oliva);color:#fff;box-shadow:0 10px 26px rgba(121,121,26,.26)}
 .btn--primario:hover{background:var(--oliva-osc);transform:translateY(-2px);box-shadow:0 14px 32px rgba(121,121,26,.32)}
 .btn--tostado{background:var(--caramelo);color:#fff;box-shadow:0 10px 26px rgba(189,154,113,.34)}
-.btn--tostado:hover{background:var(--caramelo-osc);transform:translateY(-2px)}
-.btn--linea{background:transparent;color:var(--caramelo-osc);border-color:var(--caramelo)}
-.btn--linea:hover{background:var(--caramelo-osc);color:#fff;border-color:var(--caramelo-osc);transform:translateY(-2px)}
-.btn--claro{background:#fff;color:var(--caramelo-prof);box-shadow:var(--sombra-md)}
+.btn--tostado:hover{background:var(--oliva-medio);transform:translateY(-2px)}
+.btn--linea{background:transparent;color:var(--oliva-medio);border-color:var(--caramelo)}
+.btn--linea:hover{background:var(--oliva-medio);color:#fff;border-color:var(--oliva-medio);transform:translateY(-2px)}
+.btn--claro{background:#fff;color:var(--oliva-prof);box-shadow:var(--sombra-md)}
 .btn--claro:hover{transform:translateY(-2px);box-shadow:var(--sombra-lg)}
 .btn--fantasma{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.45)}
-.btn--fantasma:hover{background:#fff;color:var(--caramelo-prof)}
+.btn--fantasma:hover{background:#fff;color:var(--oliva-prof)}
 .btn--sm{padding:11px 20px;font-size:.82rem}
 
 /* ---------- Header ---------- */
 .topbar{
-  background:var(--caramelo-prof);color:#F0E4D6;font-size:.78rem;letter-spacing:.04em;
+  background:var(--oliva-prof);color:#F0E4D6;font-size:.78rem;letter-spacing:.04em;
 }
 .topbar .contenedor{
   display:flex;gap:30px;align-items:center;justify-content:center;
@@ -170,7 +171,6 @@ h4{font-size:1.05rem}
   min-height:var(--header-h);
 }
 .marca{display:flex;align-items:center;gap:12px;color:inherit}
-/* El diente en oliva: elemento chico, funciona como firma de color. */
 .marca__icono{width:34px;height:34px;flex:none;fill:none;stroke:var(--oliva);stroke-width:1.6}
 .marca__txt{display:flex;flex-direction:column;line-height:1.15}
 .marca__nombre{
@@ -180,7 +180,7 @@ h4{font-size:1.05rem}
 .marca__nombre b{font-weight:700;color:var(--titulo-fuerte)}
 .marca__rol{
   font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--caramelo-osc);font-weight:600;
+  color:var(--oliva-medio);font-weight:600;
 }
 
 .nav{display:flex;align-items:center;gap:30px}
@@ -192,10 +192,10 @@ h4{font-size:1.05rem}
   background:var(--caramelo);transition:right .25s ease;
 }
 .nav a:not(.btn):hover:after,.nav a.activo:after{right:0}
-.nav a.activo{color:var(--caramelo-osc)}
+.nav a.activo{color:var(--oliva-medio)}
 .nav .btn{display:none}
 .menu-btn{
-  display:none;background:none;border:0;cursor:pointer;color:var(--caramelo-osc);padding:6px;
+  display:none;background:none;border:0;cursor:pointer;color:var(--oliva-medio);padding:6px;
 }
 .menu-btn svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8}
 .header > .contenedor > .btn{flex:none}
@@ -210,7 +210,7 @@ h4{font-size:1.05rem}
 }
 .hero__saludo{
   display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:600;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--caramelo-osc);margin-bottom:22px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--oliva-medio);margin-bottom:22px;
 }
 .hero__saludo:before{content:"";width:34px;height:1.5px;background:var(--caramelo)}
 .hero h1{margin-bottom:26px}
@@ -225,7 +225,7 @@ h4{font-size:1.05rem}
 }
 /* Píldora con los ejes de trabajo, arriba a la derecha de la foto */
 .hero__sello{
-  position:absolute;top:24px;right:-14px;background:var(--caramelo-prof);color:#fff;
+  position:absolute;top:24px;right:-14px;background:var(--oliva-prof);color:#fff;
   border-radius:999px;padding:22px 26px;text-align:center;box-shadow:var(--sombra-md);
   font-size:.76rem;line-height:1.7;letter-spacing:.02em;
 }
@@ -275,9 +275,10 @@ h4{font-size:1.05rem}
 }
 .card-trat p{color:var(--gris);font-size:.88rem;margin:0}
 
-/* Bloque oscuro que acompaña la grilla */
+/* Bloque oscuro que acompaña la grilla (mantiene el nombre de clase
+   por compatibilidad con el HTML) */
 .bloque-oliva{
-  background:var(--caramelo-prof);color:#F3E9DE;border-radius:var(--radio-lg);
+  background:var(--oliva-prof);color:#F3E9DE;border-radius:var(--radio-lg);
   padding:clamp(30px,3.6vw,44px);display:flex;flex-direction:column;justify-content:center;
 }
 .bloque-oliva h3{
@@ -303,17 +304,16 @@ h4{font-size:1.05rem}
   width:46px;height:46px;border-radius:50%;background:var(--caramelo-claro);
   display:grid;place-items:center;flex:none;
 }
-.acor__ico svg{width:22px;height:22px;fill:none;stroke:var(--caramelo-osc);stroke-width:1.6}
+.acor__ico svg{width:22px;height:22px;fill:none;stroke:var(--oliva-medio);stroke-width:1.6}
 .acor__mas{
   margin-left:auto;width:28px;height:28px;border-radius:50%;background:var(--crema-2);
-  display:grid;place-items:center;flex:none;color:var(--caramelo-osc);
+  display:grid;place-items:center;flex:none;color:var(--oliva-medio);
   font-size:1.2rem;line-height:1;transition:transform .25s ease;
 }
 .acor[open] .acor__mas{transform:rotate(45deg);background:var(--caramelo);color:#fff}
 .acor__cuerpo{padding:0 28px 28px 92px;color:var(--gris);font-size:.94rem}
 .acor__cuerpo ul{display:grid;gap:10px;margin-top:16px}
 .acor__cuerpo li{display:flex;gap:11px;align-items:flex-start}
-/* Los tildes en oliva: detalle chico, es donde el verde suma sin dominar. */
 .acor__cuerpo li svg{width:17px;height:17px;flex:none;margin-top:5px;fill:none;stroke:var(--oliva);stroke-width:2}
 
 /* ---------- Pasos ---------- */
@@ -338,7 +338,7 @@ h4{font-size:1.05rem}
   width:46px;height:46px;border-radius:14px;background:var(--caramelo-claro);
   display:grid;place-items:center;flex:none;
 }
-.beneficio__ico svg{width:22px;height:22px;fill:none;stroke:var(--caramelo-osc);stroke-width:1.6}
+.beneficio__ico svg{width:22px;height:22px;fill:none;stroke:var(--oliva-medio);stroke-width:1.6}
 .beneficio h3{
   font-family:var(--f-texto);font-style:normal;font-weight:600;font-size:.98rem;
   color:var(--texto);margin-bottom:.3em;
@@ -354,7 +354,7 @@ h4{font-size:1.05rem}
   content:"";position:absolute;left:-30px;top:8px;width:11px;height:11px;border-radius:50%;
   background:var(--caramelo);box-shadow:0 0 0 4px var(--crema);
 }
-.timeline .anio{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--caramelo-osc)}
+.timeline .anio{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--oliva-medio)}
 .timeline h3{
   font-family:var(--f-texto);font-style:normal;font-weight:600;font-size:1rem;
   color:var(--texto);margin:.25em 0 .3em;
@@ -394,7 +394,7 @@ h4{font-size:1.05rem}
 
 /* ---------- CTA final ---------- */
 .cta{
-  position:relative;overflow:hidden;background:var(--caramelo-prof);color:#fff;
+  position:relative;overflow:hidden;background:var(--oliva-prof);color:#fff;
   border-radius:var(--radio-xl);padding:clamp(40px,5.5vw,76px);text-align:center;
 }
 .cta:before{
@@ -415,14 +415,14 @@ h4{font-size:1.05rem}
   width:44px;height:44px;border-radius:50%;background:var(--caramelo-claro);
   display:grid;place-items:center;flex:none;
 }
-.contacto-item__ico svg{width:20px;height:20px;fill:none;stroke:var(--caramelo-osc);stroke-width:1.7}
-.contacto-item b{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--caramelo-osc);margin-bottom:3px}
+.contacto-item__ico svg{width:20px;height:20px;fill:none;stroke:var(--oliva-medio);stroke-width:1.7}
+.contacto-item b{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oliva-medio);margin-bottom:3px}
 .contacto-item a,.contacto-item span{color:var(--texto);font-size:.96rem}
-.contacto-item a:hover{color:var(--caramelo-osc)}
+.contacto-item a:hover{color:var(--oliva-medio)}
 
 .form{display:grid;gap:16px}
 .campo{display:flex;flex-direction:column;gap:7px}
-.campo label{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--caramelo-osc)}
+.campo label{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--oliva-medio)}
 .campo input,.campo textarea,.campo select{
   font-family:inherit;font-size:.95rem;color:var(--texto);background:var(--blanco);
   border:1.5px solid var(--borde);border-radius:14px;padding:14px 16px;
@@ -449,7 +449,7 @@ h4{font-size:1.05rem}
 .faq .acor__cuerpo{padding-left:26px}
 
 /* ---------- Footer ---------- */
-.footer{background:var(--caramelo-prof);color:rgba(255,255,255,.74);padding:clamp(48px,5vw,72px) 0 0}
+.footer{background:var(--oliva-prof);color:rgba(255,255,255,.74);padding:clamp(48px,5vw,72px) 0 0}
 .footer__top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px}
 .footer h4{
   color:#fff;font-family:var(--f-texto);font-style:normal;font-size:.72rem;font-weight:600;
